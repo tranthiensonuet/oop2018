@@ -8,48 +8,58 @@ public class Student {
     private String Group;
     private String Email;
     // TODO: khai báo các phương thức getter, setter cho Student
-    public String getName(){
+
+    public String getName() {
         return Name;
     }
-    public void setName(String n){
-        n = Name;
+
+    public void setName(String name) {
+        Name = name;
     }
-    public String getID(){
+
+    public String getID() {
         return ID;
     }
-    public void setID(String n){
-        n = ID;
+
+    public void setID(String ID) {
+        this.ID = ID;
     }
-    public String getGroup(){
+
+    public String getGroup() {
         return Group;
     }
-    public void setGroup(String n){
-        n = Group;
+
+    public void setGroup(String group) {
+        Group = group;
     }
-    public String getEmail(){
+
+    public String getEmail() {
         return Email;
     }
-    public void setEmail(String n){
-        n = Email;
+
+    public void setEmail(String email) {
+        Email = email;
     }
+
     /**
      * Constructor 1
      */
-    Student() {
+    public Student() {
         // TODO:
         Name = "Student";
         ID = "000";
-        Group = "INT22041";
+        Group = "INT22042";
         Email = "uet@vnu.edu.vn";
     }
 
     /**
      * Constructor 2
+     *
      * @param n
      * @param sid
      * @param em
      */
-    Student(String n, String sid, String em) {
+    public Student(String n, String sid, String em) {
         // TODO:
         Name = n;
         ID = sid;
@@ -59,9 +69,10 @@ public class Student {
 
     /**
      * Constructor 3
+     *
      * @param s
      */
-    Student(Student s) {
+    public Student(Student s) {
         // TODO:
         Name = s.Name;
         ID = s.ID;
@@ -69,11 +80,11 @@ public class Student {
         Email = s.Email;
     }
 
-    public void getInfo() {
-        // TODO:
-        System.out.println("Name: " + getName());
-        System.out.println("ID: " + getID());
-        System.out.println("Group: " + getGroup());
-        System.out.println("Email: " + getEmail());
+    public String getInfo() {
+        return "Student{" +
+                "Name='" + Name + '\'' +
+                ", ID='" + ID + '\'' +
+                ", Email='" + Email + '\'' +
+                '}';
     }
 }
