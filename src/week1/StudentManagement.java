@@ -1,7 +1,6 @@
 package week1;
 
 
-import com.sun.org.apache.xpath.internal.SourceTree;
 
 public class StudentManagement {
 
@@ -33,6 +32,16 @@ public class StudentManagement {
         st.students[0].setID("17021006");
         st.students[0].setGroup("INT22041");
         st.students[0].setEmail("17021006@vnu.edu.vn");
+        System.out.println(st.students[0].getInfo());
+        //sinh vien 2
+        st.students[1] = new Student();
+        System.out.println(st.students[1].getInfo());
+        //sinh vien 3
+        st.students[2] = new Student("Nguyen Van A", "17020001", "17021001@vnu.edu.vn");
+        System.out.println(st.students[2].getInfo());
+        //sinh vien 4
+        st.students[3] = new Student(st.students[0]);
+        System.out.println(st.students[3].getInfo());
         st.students[0].getInfo();
         //sinh vien 2
         st.students[1] = new Student();
