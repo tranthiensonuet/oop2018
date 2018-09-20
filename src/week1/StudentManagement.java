@@ -27,11 +27,10 @@ public class StudentManagement {
             {
                 if (kt[i])
                 {
-                    str = students[i].getGroup();
-                    System.out.println("Sinh vien thuoc lop " + str + " la: ");
+                    System.out.println("Sinh vien thuoc lop " + students[i].getGroup() + " la: ");
                     for (int j = i; j < limit; j++)
                     {
-                        if (kt[j] && str.equals(students[j].getGroup()) && students[j] != null)
+                        if (kt[j] && students[i].getGroup().equals(students[j].getGroup()) && students[j] != null)
                         {
                             kt[j] = false;
                             System.out.println(students[j].getInfo());
