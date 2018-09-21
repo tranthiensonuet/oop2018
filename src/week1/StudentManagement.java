@@ -87,8 +87,8 @@ public class StudentManagement {
         students[4].setGroup("INT22042");
         System.out.println(sameGroup(students[1], students[2]));
         studentsByGroup();
-        System.out.println("Danh sach xoa la: ");
-        removeStudent("17020001");
+        System.out.println("Danh sach sau khi xoa la: ");
+        removeStudent("17021006");
 
 
     }
