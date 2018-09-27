@@ -1,6 +1,8 @@
 package week2.task2;
 
 
+import java.util.Objects;
+
 public class Fraction {
     //ucln
     public static int gcd(int a, int b) {
@@ -25,7 +27,9 @@ public class Fraction {
     public Fraction add(Fraction other) {
         // TODO: Phương thức cộng hai phân số (this và other), trả về đối tượng Fraction mới
         if (other.denominator == 0 || denominator == 0)
+        {
             return null;
+        }
         else {
             int resultnum = 0, resultden = 0;
             Fraction result = new Fraction(0, 0);
@@ -86,16 +90,22 @@ public class Fraction {
         }
     }
 
-    public boolean equals(Object obj) {
-        Fraction e1 = new Fraction(1, 1);
-        e1 = this.subtract((Fraction) obj);
-        if (e1.numerator * e1.denominator > 0)
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Fraction fraction = (Fraction) o;
+        Fraction result = new Fraction(1, 1);
+        result = this.subtract(fraction);
+        if (result.numerator * result.denominator == 0)
             return true;
-        else return false;
+        return false;
     }
+
+
+
     //In ra ket qua cua phan so
     public void result(){
-        if (denominator == 0 && numerator != 0)
+        if (this.denominator == 0 && this.numerator != 0)
             System.out.println("Phan so khong hop le");
         else
         {
@@ -109,30 +119,13 @@ public class Fraction {
         }
 
     }
-    // So sanh 2 phan so
-    public void sosanh(Fraction other) {
-        if (denominator == 0 || other.denominator == 0)
-            System.out.println("Phan so khong hop le");
-        else {
-            Fraction result = new Fraction(1, 1);
-            result = this.subtract(other);
-            if (result.numerator * result.denominator == 0)
-                System.out.println("Hai phan so bang nhau");
-            else {
-                boolean check = equals(other);
-                if (check)
-                    System.out.println("Phan so thu nhat lon hon phan so thu 2");
-                else
-                    System.out.println("Phan so thu nhat nho hon phan so thu 2");
-            }
-        }
-    }
+
 
     public static void main(String[] args) {
-        Fraction s1 = new Fraction(-2, 0);
-        Fraction s2 = new Fraction(2, 3);
+        Fraction s1 = new Fraction(2, 3);
+        Fraction s2 = new Fraction(4, 5);
         //Cong 2 phan so
-        /*Fraction sum = s1.add(s2);
+        Fraction sum = s1.add(s2);
         sum.result();
         //Tru 2 phan so
         Fraction hieu = s1.subtract(s2);
@@ -142,10 +135,9 @@ public class Fraction {
         tich.result();
         //Chia 2 phan so
         Fraction thuong = s1.divide(s2);
-        thuong.result();*/
+        thuong.result();
         // So sanh 2 phan so
-        s1.sosanh(s2);
-
+        System.out.println(s1.equals(s2));
     }
 }
 
