@@ -89,16 +89,15 @@ public class Fraction {
             return result;
         }
     }
-
+// so sanh
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
         Fraction fraction = (Fraction) o;
         Fraction result = new Fraction(1, 1);
         result = this.subtract(fraction);
         if (result.numerator * result.denominator == 0)
             return true;
         return false;
+
     }
 
 
