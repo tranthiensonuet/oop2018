@@ -1,12 +1,10 @@
 package week4.task2;
 
 /**
- * là class về đối tượng Square kế thừa {@Link Shape}
+ * là class về đối tượng Square kế thừa {@Link Rectangle}
  * @author tranthiensonuet
  */
-public class Square extends Shape{
-    private double side; // cạnh hình vuông
-
+public class Square extends Rectangle{
     /**
      * phương thức khởi tạo không có tham số
      */
@@ -18,7 +16,7 @@ public class Square extends Shape{
      * @param side
      */
     public Square(double side){
-        this.side = side;
+        new Rectangle(side, side);
     }
 
     /**
@@ -29,8 +27,7 @@ public class Square extends Shape{
      * @param filled
      */
     public Square(double side, String color, boolean filled){
-        super(color, filled);
-        this.side = side;
+        super(side,side,color,filled);
     }
 
     /**
@@ -38,7 +35,7 @@ public class Square extends Shape{
      * @return giá trị cạnh
      */
     public double getSide(){
-        return side;
+        return getWidth();
     }
 
     /**
@@ -46,7 +43,8 @@ public class Square extends Shape{
      * @param side
      */
     public void setSide(double side){
-        this.side = side;
+        setWidth(side);
+        setLength(side);
     }
 
     /**
@@ -54,7 +52,7 @@ public class Square extends Shape{
      * @param side
      */
     public void setWidth(double side){
-        this.side = side;
+        width = side;
     }
 
     /**
@@ -62,7 +60,7 @@ public class Square extends Shape{
      * @param side
      */
     public void setLength(double side){
-        this.side = side;
+        length = side;
     }
 
     /**
@@ -72,7 +70,8 @@ public class Square extends Shape{
     @Override
     public String toString() {
         return "Square{" +
-                "side=" + side +
+                "width=" + width +
+                ", length=" + length +
                 ", color='" + color + '\'' +
                 ", filled=" + filled +
                 '}';

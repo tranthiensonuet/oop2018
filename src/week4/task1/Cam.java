@@ -39,4 +39,24 @@ public class Cam extends HoaQua{
     public void setYear(int year){
         this.year = year;
     }
+
+    /**
+     * phương thức so sánh số lượng cam
+     * @return 0 là bằng nhau hoặc 1 không bằng nhau
+     */
+    public int equalsnumber (Cam cam){
+        if (cam.number == number )
+            return 0;
+        else {
+            return 1;
+        }
+    }
+    /*
+    public static void main(String[] args) {
+        HoaQua cam1 = new HoaQua();
+        HoaQua cam2 = new HoaQua();
+        cam1.setSource("China");
+        cam2.setSource("VietNam");
+        System.out.println(cam1.equals(cam2));
+    }*/
 }

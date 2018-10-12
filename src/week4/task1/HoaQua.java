@@ -36,7 +36,18 @@ public class HoaQua{
      * phương thức set nguồn gốc của hoa quả
      * @param source
      */
-    public void setSource(String source){
-        this.source = source;
+    public void setSource(String source) {
+        this.source=source;
     }
+
+    /**
+     * phương thức so sánh nguồn gốc của 2 quả
+     * @return true hoặc false
+     */
+    public boolean equals(HoaQua hq){
+        if (source.equals(hq.source))
+            return true;
+        else return false;
+    }
+
 }
