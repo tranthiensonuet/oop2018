@@ -2,14 +2,14 @@ package week5_6;
 
 public class Main {
     public static void main(String[] args) {
-        Circle circle = new Circle();
-        Circle circle1 = new Circle();
+        Circle circle = new Circle(3.0, 3.0, 2.0, "red", true);
+        Circle circle1 = new Circle(2.0, 3.0, 2.0);
         Rectangle rectangle = new Rectangle();
-        Rectangle rectangle1 = new Rectangle();
-        Square square = new Square();
-        Square square1 = new Square();
-        Triangle triangle = new Triangle();
-        Triangle triangle1 = new Triangle();
+        Rectangle rectangle1 = new Rectangle(1.0, 2.0, 3.0, 2.0, "green", false);
+        Square square = new Square(2.0, 2.0, 2.0);
+        Square square1 = new Square(3.0, 2.0, 2.0, "gray", true);
+        Triangle triangle = new Triangle(new Point(3.0, 2.0), new Point(3.0, 2.0), new Point(3.0, 2.0));
+        Triangle triangle1 = new Triangle(new Point(2.0, 1.0), new Point(2.0, 1.0), new Point(2.0, 1.0), "blue", true);
         Hexagon hexagon = new Hexagon();
         Hexagon hexagon1 = new Hexagon();
         Layer layer = new Layer();

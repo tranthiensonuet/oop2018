@@ -3,36 +3,34 @@ package week5_6;
 import java.util.Objects;
 
 public class Square extends Shape {
-    private Point centerPoint;
     private double side;
-
-    public Square(String color, boolean filled, Point centerPoint, double side) {
-        super(color, filled);
-        this.centerPoint = centerPoint;
-        this.side = side;
-    }
-
-    public Square(Point centerPoint, double side) {
-        this.centerPoint = centerPoint;
-        this.side = side;
-    }
-
-    public Square(String color, boolean filled) {
-        super(color, filled);
-        this.side = 1.0;
-        this.centerPoint = new Point();
-    }
+    private Point centerPoint;
 
     public Square() {
-        this.side = 1.0;
-        this.centerPoint = new Point();
+        side = 1.0;
+        centerPoint = new Point(2.0, 2.0);
+    }
+    public Square(double side, double x, double y, String color, boolean filled) {
+        super(color, filled);
+        centerPoint = new Point(x, y);
+        this.side = side;
+    }
+    public Square(double side, double x, double y) {
+        this.centerPoint = new Point(x, y);
+        this.side = side;
+    }
+    public Square(String color, boolean filled) {
+        super(color, filled);
+        side = 1.0;
+        centerPoint = new Point(2, 2);
     }
 
     @Override
     public String toString() {
         return "Square{" +
-                "centerPoint=" + centerPoint +
-                ", side=" + side +
+                "centerPoint = " + centerPoint +
+                ", side = " + side +
+                ", color = " + this.getColor() +
                 '}';
     }
 

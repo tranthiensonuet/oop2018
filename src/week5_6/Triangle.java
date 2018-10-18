@@ -5,7 +5,11 @@ import java.util.Objects;
 public class Triangle extends Shape {
     private Point a, b, c;
 
-    public Triangle(String color, boolean filled, Point a, Point b, Point c) {
+    public Triangle() {
+        this(new Point(1.0, 2.0), new Point(2.0, 3.0), new Point(1.0, 3.0));
+    }
+
+    public Triangle(Point a, Point b, Point c, String color, boolean filled) {
         super(color, filled);
         this.a = a;
         this.b = b;
@@ -20,10 +24,6 @@ public class Triangle extends Shape {
 
     public Triangle(String color, boolean filled) {
         super(color, filled);
-    }
-
-    public Triangle() {
-        this(new Point(), new Point(), new Point());
     }
 
     public Point getA() {

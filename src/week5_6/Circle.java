@@ -4,26 +4,27 @@ import java.util.Objects;
 
 public class Circle extends Shape {
     private double radius;
-    private final double PI = 3.14f;
+    private final double PI = 3.14;
     private Point centerPoint;
 
-    public Circle(String color, boolean filled, double radius, Point centerPoint) {
-        super(color, filled);
-        this.radius = radius;
-        this.centerPoint = centerPoint;
-    }
-
-    public Circle(double radius, Point centerPoint) {
-        this.radius = radius;
-        this.centerPoint = centerPoint;
+    public Circle() {
+        radius = 1.0;
+        centerPoint = new Point(1,1);
     }
 
     public Circle(String color, boolean filled) {
         super(color, filled);
     }
 
-    public Circle() {
-        this(2, new Point());
+    public Circle(double radius, double x, double y, String color, boolean filled) {
+        super(color, filled);
+        this.radius = radius;
+        centerPoint = new Point(x, y);
+    }
+
+    public Circle(double radius, double x, double y) {
+        this.radius = radius;
+        centerPoint = new Point(x, y);
     }
 
     public double getRadius() {
@@ -46,12 +47,20 @@ public class Circle extends Shape {
         this.centerPoint = centerPoint;
     }
 
+    public double getArea(){
+        return PI*radius*radius;
+    }
+    public double getPerimeter(){
+        return 2*PI*radius;
+    }
+
     @Override
     public String toString() {
         return "Circle{" +
-                "radius=" + radius +
-                ", PI=" + PI +
-                ", centerPoint=" + centerPoint +
+                "radius = " + radius +
+                ", PI = " + PI +
+                ", color = " + this.getColor() +
+                ", centerPoint = " + centerPoint +
                 '}';
     }
 

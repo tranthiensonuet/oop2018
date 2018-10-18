@@ -6,6 +6,11 @@ public class Hexagon extends Shape {
     private Point centerPoint;
     private double side;
 
+    public Hexagon() {
+        this.side = 1.0;
+        this.centerPoint = new Point(2.0, 3.0);
+    }
+
     public Hexagon(String color, boolean filled, Point centerPoint, double side) {
         super(color, filled);
         this.centerPoint = centerPoint;
@@ -17,13 +22,9 @@ public class Hexagon extends Shape {
         this.side = side;
     }
 
-    public Hexagon() {
-        this.side = 1.0;
-        this.centerPoint = new Point();
-    }
 
     public Hexagon(String color, boolean filled) {
-        this();
+        super(color,filled);
     }
 
     public Point getCenterPoint() {
@@ -45,8 +46,9 @@ public class Hexagon extends Shape {
     @Override
     public String toString() {
         return "Hexagon{" +
-                "centerPoint=" + centerPoint +
-                ", side=" + side +
+                "centerPoint = " + centerPoint +
+                ", side = " + side +
+                ", color = " + this.getColor() +
                 '}';
     }
 

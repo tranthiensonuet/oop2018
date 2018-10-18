@@ -3,14 +3,14 @@ package week5_6;
 public abstract class Shape {
     private String color;
     private boolean filled;
+    public Shape() {
+        color = "black";
+        filled = true;
+    }
 
     public Shape(String color, boolean filled) {
         this.color = color;
         this.filled = filled;
-    }
-
-    public Shape() {
-        this("black", true);
     }
 
     public String getColor() {
@@ -32,8 +32,8 @@ public abstract class Shape {
     @Override
     public String toString() {
         return "Shape{" +
-                "color='" + color + '\'' +
-                ", filled=" + filled +
+                "color = " + color + '\'' +
+                ", filled = " + filled +
                 '}';
     }
 }

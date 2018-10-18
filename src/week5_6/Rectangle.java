@@ -7,25 +7,27 @@ public class Rectangle extends Shape {
     private double length;
     private Point pointCenter;
 
-    public Rectangle(String color, boolean filled, double width, double length, Point pointCenter) {
-        super(color, filled);
-        this.width = width;
-        this.length = length;
-        this.pointCenter = pointCenter;
-    }
-
-    public Rectangle(double width, double length, Point pointCenter) {
-        this.width = width;
-        this.length = length;
-        this.pointCenter = pointCenter;
+    public Rectangle() {
+        width = 1.0;
+        length = 2.0;
+        pointCenter = new Point(3.0, 4.0);
     }
 
     public Rectangle(String color, boolean filled) {
         super(color, filled);
     }
 
-    public Rectangle() {
-        this(1, 1, new Point());
+    public Rectangle(double width, double length, double x, double y, String color, boolean filled) {
+        super(color, filled);
+        this.width = width;
+        this.length = length;
+        pointCenter = new Point(x, y);
+    }
+
+    public Rectangle(double width, double length, double x, double y) {
+        this.width = width;
+        this.length = length;
+        this.pointCenter = new Point(x, y);
     }
 
     public double getWidth() {
@@ -52,12 +54,19 @@ public class Rectangle extends Shape {
         this.pointCenter = pointCenter;
     }
 
+    public double getArea(){
+        return width * length;
+    }
+    public  double getPerimeter(){
+        return (width + length)*2;
+    }
     @Override
     public String toString() {
         return "Rectangle{" +
-                "width=" + width +
-                ", length=" + length +
-                ", pointCenter=" + pointCenter +
+                "width = " + width +
+                ", length = " + length +
+                ", color = " + this.getColor() +
+                ", pointCenter = " + pointCenter +
                 '}';
     }
 

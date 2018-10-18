@@ -21,14 +21,14 @@ public class Diagram {
         this.diagram = diagram;
     }
 
+    // delete Circle in Diagram
     public void removeCircle() {
-        for (Layer layer : diagram) {
-            layer.removeCircle();
+        for (int i = 0; i < diagram.size(); i++) {
+            diagram.get(i).deleteCircle();
         }
     }
 
     public void printDiagram() {
-
         for (Layer layer : diagram) {
             if (layer.isVisible())
                 layer.printLayer();

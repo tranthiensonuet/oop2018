@@ -42,8 +42,8 @@ public class Layer {
     public void setLayer(ArrayList<Shape> layer) {
         this.layer = layer;
     }
-
-    public void removeTriangle() {
+    // delete Triangle in Layer
+    public void deleteTriangle() {
         Iterator<Shape> iterator = layer.iterator();
         while (iterator.hasNext()) {
             Shape shape = iterator.next();
@@ -53,7 +53,7 @@ public class Layer {
         }
     }
 
-    public void removeCircle() {
+    public void deleteCircle() {
         Iterator<Shape> iterator = layer.iterator();
         while (iterator.hasNext()) {
             Shape shape = iterator.next();
