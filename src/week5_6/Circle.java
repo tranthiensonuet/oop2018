@@ -61,6 +61,7 @@ public class Circle extends Shape {
                 ", PI = " + PI +
                 ", color = " + this.getColor() +
                 ", centerPoint = " + centerPoint +
+                ", filled = " + this.isFilled() +
                 '}';
     }
 

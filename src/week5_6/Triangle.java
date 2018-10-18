@@ -7,6 +7,7 @@ public class Triangle extends Shape {
 
     public Triangle() {
         this(new Point(1.0, 2.0), new Point(2.0, 3.0), new Point(1.0, 3.0));
+
     }
 
     public Triangle(Point a, Point b, Point c, String color, boolean filled) {
@@ -53,9 +54,11 @@ public class Triangle extends Shape {
     @Override
     public String toString() {
         return "Triangle{" +
-                "a=" + a +
-                ", b=" + b +
-                ", c=" + c +
+                "a = " + a +
+                ", b = " + b +
+                ", c = " + c +
+                ", color = " + this.getColor() +
+                ", filled = " + this.isFilled() +
                 '}';
     }
 

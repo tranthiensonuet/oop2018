@@ -67,6 +67,7 @@ public class Rectangle extends Shape {
                 ", length = " + length +
                 ", color = " + this.getColor() +
                 ", pointCenter = " + pointCenter +
+                ", filled = " + this.isFilled() +
                 '}';
     }
 

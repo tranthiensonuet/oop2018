@@ -21,19 +21,19 @@ public class Diagram {
         this.diagram = diagram;
     }
 
-    // delete Circle in Diagram
-    public void removeCircle() {
-        for (int i = 0; i < diagram.size(); i++) {
-            diagram.get(i).deleteCircle();
-        }
-    }
-
     public void printDiagram() {
         for (Layer layer : diagram) {
             if (layer.isVisible())
                 layer.printLayer();
         }
     }
+
+    public void removeCircle() {
+        for (int i = 0; i < diagram.size(); i++) {
+            diagram.get(i).deleteCircle();
+        }
+    }
+
 
     public void sortLayer() {
         Layer circles = new Layer();
@@ -59,5 +59,6 @@ public class Diagram {
         diagram.add(rectangles);
         diagram.add(squares);
         diagram.add(hexagons);
+
     }
 }

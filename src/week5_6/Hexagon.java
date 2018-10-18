@@ -22,7 +22,6 @@ public class Hexagon extends Shape {
         this.side = side;
     }
 
-
     public Hexagon(String color, boolean filled) {
         super(color,filled);
     }
@@ -46,9 +45,10 @@ public class Hexagon extends Shape {
     @Override
     public String toString() {
         return "Hexagon{" +
-                "centerPoint = " + centerPoint +
-                ", side = " + side +
+                "side = " + side +
                 ", color = " + this.getColor() +
+                ", centerPoint = " + centerPoint +
+                ", filled = " + this.isFilled() +
                 '}';
     }
 

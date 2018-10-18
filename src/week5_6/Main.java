@@ -2,7 +2,7 @@ package week5_6;
 
 public class Main {
     public static void main(String[] args) {
-        Circle circle = new Circle(3.0, 3.0, 2.0, "red", true);
+        Circle circle = new Circle(2.0, 3.0, 2.0);
         Circle circle1 = new Circle(2.0, 3.0, 2.0);
         Rectangle rectangle = new Rectangle();
         Rectangle rectangle1 = new Rectangle(1.0, 2.0, 3.0, 2.0, "green", false);
@@ -26,22 +26,22 @@ public class Main {
         layer.getLayer().add(rectangle);
         layer.getLayer().add(square);
 
-        System.out.println("Danh sach truoc khi xoa la:");
         System.out.println("---------------------------------");
 
-        layer.printLayer();
-        //layer.removeTriangle();
-        layer.revomeDuplicated();
+        //layer.printLayer();
+        //layer.deleteTriangle();
+        //layer.removesame();
         //layer.removeCircle();
         //layer.printLayer();
+        //layer.deleteCircle();
 
         System.out.println("---------------------------------");
-        System.out.println("Danh sach sau khi xoa la: ");
+        System.out.println("---------------------------------");
 
         diagram.getDiagram().add(layer);
-        //diagram.removeCircle();
-        diagram.sortLayer();
-        diagram.printDiagram();
+        diagram.removeCircle();
+        //diagram.sortLayer();
+        //diagram.printDiagram();
 
     }
 }

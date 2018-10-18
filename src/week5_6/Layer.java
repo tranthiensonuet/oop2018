@@ -42,7 +42,13 @@ public class Layer {
     public void setLayer(ArrayList<Shape> layer) {
         this.layer = layer;
     }
-    // delete Triangle in Layer
+
+    public void printLayer() {
+        for (Shape shape : layer) {
+            System.out.println(shape.toString());
+        }
+    }
+
     public void deleteTriangle() {
         Iterator<Shape> iterator = layer.iterator();
         while (iterator.hasNext()) {
@@ -51,6 +57,7 @@ public class Layer {
                 iterator.remove();
             }
         }
+        printLayer();
     }
 
     public void deleteCircle() {
@@ -61,16 +68,10 @@ public class Layer {
                 iterator.remove();
             }
         }
+        printLayer();
     }
 
-    public void printLayer() {
-
-        for (Shape shape : layer) {
-            System.out.println(shape.toString());
-        }
-    }
-
-    public void revomeDuplicated() {
+    public void removesame() {
         for (int i = 0; i < layer.size(); i++) {
             int count = 0;
             for (int j = i + 1; j < layer.size(); j++) {
@@ -80,6 +81,7 @@ public class Layer {
             }
             if (count > 0) layer.remove(i--);
         }
+        printLayer();
     }
 
 }
